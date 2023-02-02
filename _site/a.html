@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>QA Glossary - Letter A | QA Glossary</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="QA Glossary - Letter A" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is just Letter A" />
+<meta property="og:description" content="This is just Letter A" />
+<link rel="canonical" href="http://localhost:4000/a.html" />
+<meta property="og:url" content="http://localhost:4000/a.html" />
+<meta property="og:site_name" content="QA Glossary" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="QA Glossary - Letter A" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is just Letter A","headline":"QA Glossary - Letter A","url":"http://localhost:4000/a.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">QA Glossary - Letter A</h1>
+      <h2 class="project-tagline">This is just Letter A</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h3 id="acceptance-testing">Acceptance testing:</h3>
+<ul>
+  <li>Formal testing conducted to enable a user, customer, or other authorized entity to determine whether to accept a system or component. [IEEE], user acceptance testing</li>
+</ul>
+
+<h3 id="accessibility-testing">Accessibility testing</h3>
+<ul>
+  <li>[gDoc]</li>
+</ul>
+
+<h3 id="actual-outcome">Actual outcome:</h3>
+<ul>
+  <li>The behaviour actually produced when the object is tested under specified conditions.</li>
+</ul>
+
+<h3 id="adb-android-debug-bridge">adb (Android Debug Bridge)</h3>
+<ul>
+  <li>is a command-line tool that lets you communicate with a device.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb install path_to_apk
+</code></pre></div>    </div>
+  </li>
+  <li>Check the device ID (command to get the list of emulators or devices connected to the machine)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb devices
+./adb devices
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Ceck Device serial number</p>
+
+    <p>Option A</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On phone or tablet navigating to “Settings &gt; About Phone &gt; Status”.
+</code></pre></div>    </div>
+    <p>Option B</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb get-serialno
+</code></pre></div>    </div>
+  </li>
+  <li>Install/Uninstall Apps
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb install "path/to/file.apk"
+adb uninstall &lt;package-name&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>pull logcat (parameter -c will clear the current logs on the device.)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb logcat -c  
+</code></pre></div>    </div>
+  </li>
+  <li>Save the logcat output to a file on the local system.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb logcat -d &gt; [path_to_file] 
+</code></pre></div>    </div>
+  </li>
+  <li>dump the whole device information like dumpstate, dumpsys and logcat output.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb bugreport &gt; [path_to_file] 
+</code></pre></div>    </div>
+  </li>
+  <li>Start or Stop ADB Server
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb start-server
+adb kill-server
+</code></pre></div>    </div>
+  </li>
+  <li>Flashing a device with the following cmds
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb devices
+adb root &amp;&amp; adb remount &amp;&amp;
+#adb wait-for-device &amp;&amp;
+aae flash 2s 7639102
+#aae flash --yes birdy-img-7639102.zip 2s
+</code></pre></div>    </div>
+  </li>
+  <li>Take a screenshot on the device and place the file on your computer
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb shell screencap /sdcard/screenshot.png
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="ad-hoc-testing">ad hoc testing:</h3>
+<ul>
+  <li>it is a form of a black box or behavioural testing performed without any formal process in place.</li>
+  <li>
+    <p>Mainly done with the aim of trying to uncover defects which cannot be captured through traditional or formal processes followed during the testing cycle. 		
+Testing carried out using no recognised test case design technique.
+In real life you get request from the PM or developer to check how bad a bug is or how good the fix.</p>
+
+    <p><strong>Weakness</strong>
+      - not being able to recreate defects in the subsequent attempts if asked for information.</p>
+
+    <p><strong>effort accountability</strong>
+      - Since this is not planned/ structured, there is no way to account for the time and effort invested in this kind of testing.
+has to only be performed by a very knowledgeable and skilled tester in the team as it demands being proactive and intuition in terms foreseeing potential defect ridden areas.</p>
+  </li>
+</ul>
+
+<h3 id="agile">Agile</h3>
+<ul>
+  <li>software development methodologies based on iterative development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams. Agile is a time-boxed, iterative approach to software delivery that builds software incrementally from the start of the project, instead of trying to deliver it all at once near the end. It works by breaking projects down into little bits of user functionality called user stories, prioritizing them, and then continuously delivering them in short two-week cycles.</li>
+</ul>
+
+<h3 id="alpha-testing">Alpha testing:</h3>
+
+<ul>
+  <li>Simulated or actual operational testing at an in-house site not otherwise involved with the software developers.</li>
+</ul>
+
+<h3 id="anr-application-not-responding">ANR (Application Not Responding):</h3>
+<ul>
+  <li>An ANR error is triggered, when the UI thread of an Android app is blocked for too long.</li>
+</ul>
+
+<h3 id="api-application-programming-interface">API (Application Programming Interface)</h3>
+<ul>
+  <li>A software intermediary that allows two applications to talk to each other</li>
+</ul>
+
+<h3 id="api-testing">API testing</h3>
+<p>Types:</p>
+<ol>
+  <li>‍Unit testing (automatically run with every build of the application.)</li>
+  <li>Integration Testing.</li>
+  <li>Performance testing.</li>
+  <li>Load testing.</li>
+  <li>Runtime error detection.</li>
+  <li>Security testing.</li>
+</ol>
+
+<h3 id="appium">Appium</h3>
+<ul>
+  <li>Selenium’s mobile analogue,</li>
+  <li>Used for mobile UI automation.</li>
+</ul>
+
+<h3 id="assurance">Assurance:</h3>
+<ul>
+  <li>Grounds for justified confidence that a claim has been or will be achieved.</li>
+</ul>
+
+<p><a href="./">back</a></p>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
